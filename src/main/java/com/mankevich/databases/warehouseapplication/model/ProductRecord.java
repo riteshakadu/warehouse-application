@@ -2,6 +2,7 @@ package com.mankevich.databases.warehouseapplication.model;
 
 import com.mankevich.databases.warehouseapplication.annotation.Overwrite;
 import lombok.*;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 
@@ -26,6 +27,7 @@ public class ProductRecord extends BaseRecord<Long> {
   private String photo;
   private Double price;
   private String unit;
+  @Type(type = "text")
   private String description;
 
   @ManyToOne

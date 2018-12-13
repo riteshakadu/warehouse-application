@@ -2,21 +2,21 @@ CREATE SCHEMA warehouse;
 USE warehouse;
 
 CREATE TABLE product(
-	id INTEGER PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
+	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
     phone VARCHAR(30),
     photo VARCHAR(100),
     price REAL NOT NULL,
     unit VARCHAR(30) NOT NULL,
     description TEXT,
-    company_id INTEGER,
-    warehouse_id INTEGER
+    company_id BIGINT,
+    warehouse_id BIGINT
 );
 
 CREATE TABLE warehouse(
-	id INTEGER PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
+	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
-    company_id INTEGER,
+    company_id BIGINT,
     /*address start*/
     country VARCHAR(30),
     city VARCHAR(30),
@@ -26,7 +26,7 @@ CREATE TABLE warehouse(
 );
 
 CREATE TABLE company(
-	id INTEGER PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
+	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
     registration_date DATETIME,
     photo VARCHAR(100),
@@ -39,10 +39,10 @@ CREATE TABLE company(
 );
 
 CREATE TABLE employee (
-	id INTEGER PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
+	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
     phone VARCHAR(30),
-    company_id INTEGER
+    company_id BIGINT
 );
 
 ALTER TABLE product ADD FOREIGN KEY (company_id) REFERENCES company(id);

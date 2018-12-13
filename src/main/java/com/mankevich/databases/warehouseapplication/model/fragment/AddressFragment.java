@@ -17,7 +17,7 @@ import javax.persistence.Embeddable;
 @Builder
 @Embeddable
 public class AddressFragment {
-  private String county;
+  private String country;
   private String city;
   private String street;
   private String house;

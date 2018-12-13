@@ -25,7 +25,8 @@ public class CompanyRecord extends BaseRecord<Long> {
   @GeneratedValue private Long id;
   private String name;
   @Embedded private AddressFragment address;
-  private Date date;
+  @Column(name = "registration_date")
+  private Date registrationDate;
   private String photo;
 
   @OneToMany(mappedBy = "company")
