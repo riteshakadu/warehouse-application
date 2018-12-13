@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" th:href="@{/assets/lib/bootstrap4/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/style/main.css}">
+</head>
+<body>
+<header id="header" class="header"
+        th:replace="layouts/common/header.html :: header"></header>
+<main th:include="__${layoutFile}__ :: fragment"></main>
+<footer id="footer" class="footer"
+        th:replace="layouts/common/footer.html :: footer"></footer>
+<script th:src="@{/script/main.js}"></script>
+</body>
+</html>

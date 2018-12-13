@@ -1,4 +1,4 @@
-package com.mankevich.databases.warehouseapplication.controller;
+package com.mankevich.databases.warehouseapplication.controller.rest;
 
 import com.mankevich.databases.warehouseapplication.exception.DataErrorException;
 import com.mankevich.databases.warehouseapplication.exception.NotFoundException;

@@ -1,0 +1,27 @@
+.page-footer {
+    bottom: 0;
+    color: #fff;
+}
+
+.page-footer a {
+    color: #fff;
+}
+
+.blue {
+    background-color: #2196f3 !important;
+}
+
+.font-small {
+    font-size: .9rem;
+}
+
+.footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .2);
+    color: rgba(255, 255, 255, .6);
+}
+
+.navbar-brand__img {
+    height: 36px;
+    width: 36px;
+}

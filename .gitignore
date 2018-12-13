@@ -24,3 +24,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### Custom ###
+src/main/resources/static/assets/lib
