@@ -25,3 +25,28 @@
     height: 36px;
     width: 36px;
 }
+
+.nav-item_selected {
+    color: #0a0a0a !important;
+    text-shadow: #1a78c2 -1px 0 11px !important;
+}
+
+.nav-item {
+    transition: background-color .2s linear;
+}
+
+.nav-link {
+    transition: color .2s linear;
+}
+
+.nav-item:hover {
+    background: #2196f3b5;
+}
+
+.nav-item:hover > .nav-link {
+    color: #fff;
+}
+
+.main {
+    min-height: 500px;
+}

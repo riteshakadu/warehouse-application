@@ -1,3 +1,38 @@
 <main xmlns:th="http://www.thymeleaf.org" th:fragment="fragment">
-    main
+    <div class="main__greetings">
+        <h3 class="main__greetings_header">
+            Welcome to <strong>My Warehouse</strong> application!
+        </h3>
+        <p class="main__greetings_text">
+            Try out our services
+        </p>
+    </div>
+
+    <style>
+        main {
+            background: url("/assets/img/main-bg-opacity.png");
+            background-size: cover;
+        }
+
+        .main__greetings {
+            height: 100%;
+            text-align: center;
+            background: #ffffff4d;
+            position: relative;
+            top: 160px;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 30px;
+            color: #000;
+        }
+
+        .main__greetings_header {
+            font-size: 36px;
+        }
+
+        .main__greetings_text {
+            font-size: 23px;
+            font-weight: 400;
+        }
+    </style>
 </main>
