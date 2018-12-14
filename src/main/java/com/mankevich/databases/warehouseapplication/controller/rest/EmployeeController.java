@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@RequestMapping("/api/employee")
+@RequestMapping({"/api/employee", "/api/employees"})
 public class EmployeeController {
   private final EmployeeRepository employeeRepository;
   private final EmployeeService employeeService;

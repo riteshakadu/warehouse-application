@@ -1,5 +1,6 @@
 package com.mankevich.databases.warehouseapplication.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mankevich.databases.warehouseapplication.annotation.Overwrite;
 import com.mankevich.databases.warehouseapplication.model.fragment.AddressFragment;
 import lombok.*;
@@ -29,9 +30,11 @@ public class CompanyRecord extends BaseRecord<Long> {
   private Date registrationDate;
   private String photo;
 
-  @OneToMany(mappedBy = "company")
+  @JsonIgnore
+  @OneToMany(mappedBy = "company", fetch = FetchType.LAZY)
   private Set<EmployeeRecord> employees;
 
-  @OneToMany(mappedBy = "company")
+  @JsonIgnore
+  @OneToMany(mappedBy = "company", fetch = FetchType.LAZY)
   private Set<WarehouseRecord> warehouses;
 }

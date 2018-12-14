@@ -4,11 +4,11 @@ USE warehouse;
 CREATE TABLE product(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
-    phone VARCHAR(30),
     photo VARCHAR(100),
     price REAL NOT NULL,
     unit VARCHAR(30) NOT NULL,
     description TEXT,
+    added_date DATETIME,
     company_id BIGINT,
     warehouse_id BIGINT
 );
@@ -16,6 +16,7 @@ CREATE TABLE product(
 CREATE TABLE warehouse(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
+    added_date DATETIME,
     company_id BIGINT,
     /*address start*/
     country VARCHAR(30),
@@ -29,6 +30,7 @@ CREATE TABLE company(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
     registration_date DATETIME,
+    added_date DATETIME,
     photo VARCHAR(100),
     /*address start*/
     country VARCHAR(30),

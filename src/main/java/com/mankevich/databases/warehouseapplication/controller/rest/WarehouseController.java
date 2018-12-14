@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@RequestMapping("/api/warehouse")
+@RequestMapping({"/api/warehouse", "/api/warehouses"})
 public class WarehouseController {
   private final WarehouseRepository warehouseRepository;
   private final WarehouseService warehouseService;

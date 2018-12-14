@@ -17,6 +17,19 @@ public class ViewController {
   @GetMapping("/{template}")
   public String main(Model model, @PathVariable String template) {
 	model.addAttribute("layoutFile", String.format("layouts/%s.html", template));
+	model.addAttribute("cssFileURL", String.format("/style/%s.css", template));
+	model.addAttribute("jsFileUrl", String.format("/script/%s.js", template));
 	return "index";
+  }
+
+  @GetMapping("/{template}/{id}")
+  public String details(Model model,
+						@PathVariable String template,
+						@PathVariable Long id) {
+	model.addAttribute("layoutFile", String.format("layouts/details/%s.html", template));
+	model.addAttribute("cssFileURL", String.format("/style/%s.css", template));
+	model.addAttribute("jsFileUrl", String.format("/script/details/%s.js", template));
+	model.addAttribute("entityId", id);
+    return "index";
   }
 }

@@ -7,7 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
     <link rel="stylesheet" th:href="@{/assets/lib/bootstrap4/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/style/main.css}">
+    <link rel="stylesheet" th:href="@{/style/common.css}">
+    <link rel="stylesheet" th:href="${cssFileURL}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <header id="header" class="header"
@@ -16,8 +18,14 @@
 <footer id="footer" class="footer"
         th:replace="layouts/common/footer.html :: footer"></footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 <script th:src="@{/assets/lib/jquery/jquery-3.3.1.min.js}"></script>
 <script th:src="@{/assets/lib/bootstrap4/js/bootstrap.min.js}"></script>
-<script th:src="@{/script/main.js}"></script>
+<script th:src="@{/script/common.js}"></script>
+<script th:src="@{/script/models.js}"></script>
+<script th:src="${jsFileUrl}"></script>
+<script th:src="@{/assets/lib/jquery/plugins/loadingoverlay.js}"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+.page-footer {
+    bottom: 0;
+    color: #fff;
+}
+
+.page-footer a {
+    color: #fff;
+}
+
+.blue {
+    background-color: #2196f3 !important;
+}
+
+.font-small {
+    font-size: .9rem;
+}
+
+.footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .2);
+    color: rgba(255, 255, 255, .6);
+}
+
+.navbar-brand__img {
+    height: 36px;
+    width: 36px;
+}
+
+.nav-item_selected {
+    color: #0a0a0a !important;
+    text-shadow: #1a78c2 -1px 0 11px !important;
+}
+
+.nav-item {
+    transition: background-color .2s linear;
+}
+
+.nav-link {
+    transition: color .2s linear;
+}
+
+.nav-item:hover {
+    background: #2196f3b5;
+}
+
+.nav-item:hover > .nav-link {
+    color: #fff;
+}
+
+.dark-table {
+    background: #46788c;
+    color: #f8f9fa;
+    margin-bottom: 0;
+}

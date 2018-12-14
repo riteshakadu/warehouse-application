@@ -24,7 +24,7 @@ public class EmployeeRecord extends BaseRecord<Long> {
   private String name;
   private String phone;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "company_id")
   private CompanyRecord company;
 }
