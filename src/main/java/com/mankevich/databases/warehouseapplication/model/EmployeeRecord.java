@@ -23,6 +23,7 @@ public class EmployeeRecord extends BaseRecord<Long> {
   private Long id;
   private String name;
   private String phone;
+  private String photo;
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "company_id")

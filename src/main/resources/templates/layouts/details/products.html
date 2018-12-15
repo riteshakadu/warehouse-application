@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body p-3">
             <a class="category" th:href="@{./}">Products</a>
-            <a class="arrow" th:href="@{./}">></a> <span id="headerProductName">Product name</span>
+            <a class="arrow" th:href="@{./}">></a> <span id="headerProductName"></span>
         </div>
     </div>
 
@@ -12,16 +12,19 @@
                 <div class="col-md-4 info p-0">
                     <ul class="list-group info" style="font-size: 14px;">
                         <li class="list-group-item">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmcL4PMFvs2qwNXNTtLOgAQsKTvdGF8kTgxRL19HFpBCCIstmC"
+                            <img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png"
                                  alt="Company logo" class="logo-small" id="companyLogo">
-                            <span id="companyName">Company name</span>
+                            <span id="companyName"></span>
                         </li>
                         <li class="list-group-item">
-                            <span id="productName">Product name</span>
+                            <span id="productName"></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between">
-                            <span id="warehouseName">Warehouse name</span>
-                            <span id="addedDate">06-01-1998</span>
+                            <span id="warehouseName"></span>
+                            <span id="addedDate"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span id="productDescription"></span>
                         </li>
                     </ul>
                 </div>
@@ -30,12 +33,17 @@
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </div>
                 <div class="col-md-4 photo p-0">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/51ucIXFr%2BHL.jpg" alt="Product photo"
+                    <img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" alt="Product photo"
                          id="productPhoto" class="product-photo">
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="cards-container" id="descriptionCards">
+    </div>
+
     <input id="entityId" type="hidden" th:value="${entityId}">
+
+    <link rel="stylesheet" th:href="${cssDetailsFileURL}">
 </main>

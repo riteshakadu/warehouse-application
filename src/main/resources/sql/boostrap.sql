@@ -44,6 +44,8 @@ CREATE TABLE employee (
 	id BIGINT PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
     name VARCHAR(30) NOT NULL,
     phone VARCHAR(30),
+    photo VARCHAR(100),
+    added_date DATETIME,
     company_id BIGINT
 );
 

@@ -12,6 +12,7 @@ class Warehouse {
         let warehouse = new Warehouse();
         if (raw) {
             Object.assign(warehouse, raw);
+            warehouse.address = Address.fromRawObject(warehouse.address);
             warehouse.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
         }
         return warehouse;
@@ -19,11 +20,12 @@ class Warehouse {
 }
 
 class Employee {
-    constructor(id, name, phone, company, addedDate) {
+    constructor(id, name, phone, photo, company, addedDate) {
         this.id = id;
         this.name = name;
         this.phone = phone;
         this.company = company;
+        this.photo = photo;
         this.addedDate = addedDate;
     }
 
@@ -53,6 +55,7 @@ class Company {
         let company = new Company();
         if (raw) {
             Object.assign(company, raw);
+            company.address = Address.fromRawObject(company.address);
             company.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
             company.registrationDate = new Date(Date.parse(raw.registrationDate)).toDateString();
         }
@@ -90,5 +93,17 @@ class Address {
         this.city = city;
         this.street = street;
         this.house = house;
+    }
+
+    getAddressString() {
+        return `${this.house} ${this.street}, ${this.city}, ${this.country}`
+    }
+
+    static fromRawObject(raw) {
+        let address = new Address();
+        if (raw) {
+            Object.assign(address, raw);
+        }
+        return address;
     }
 }
