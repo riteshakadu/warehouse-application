@@ -7,6 +7,9 @@ INSERT INTO product (name, photo, price, unit, description, added_date) VALUES
 ('Gosha', 'http://moroz.by/upload/iblock/579/5793291423177ecf2ba0779de7b60655.jpg', '1.56', 'BYN', 'Gosha ice cream', now()),
 ('iPhone 6S', 'https://www.euronics.ee/UserFiles/Products/Images/185289-iphone-6s-gray-0.png', '960', 'BYN', 'iPhone 6s, Apple inc.', now());
 
+INSERT INTO company (name, registration_date, photo, country, city, street, house, added_date) VALUES 
+("Apple Inc.", now(), "/assets/img/apple-logo.png", "US", "Washington", "", "", now());
+
 INSERT INTO warehouse (name, country, city, street, house, added_date) VALUES
 ('Warehouse #1', 'Belarus', 'Minsk', 'Karbisheva', '10', now()),
 ('Warehouse #2', 'Belarus', 'Gomel', 'Y. Kolosa', '11', now()),
@@ -14,3 +17,5 @@ INSERT INTO warehouse (name, country, city, street, house, added_date) VALUES
 ('Warehouse #4', 'Belarus', 'Grodno', 'M. Tanka', '13', now()),
 ('Warehouse #5', 'Russia', 'Moscow', 'Lenina square', '14', now()),
 ('Warehouse #6', 'USA', 'Washington', 'Brandon street', '1', now());
+
+select * from warehouse;

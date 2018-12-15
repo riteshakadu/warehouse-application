@@ -1,0 +1,44 @@
+.card {
+    margin: 10px 30px;
+    box-shadow: 0 0 0.4px .4px #00000019;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.info-card {
+    padding: 0 .75rem !important;
+}
+
+.info > li {
+    border-radius: 0 !important;
+}
+
+.list-group-item {
+    padding: .35rem 1.25rem;
+}
+
+.product-photo {
+    max-height: 250px;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.edit {
+    text-align: center;
+}
+
+.edit > h3 {
+    margin-top: 20px;
+}
+
+.edit > i {
+    font-size: 100px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.borders {
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+}

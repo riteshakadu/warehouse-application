@@ -7,6 +7,15 @@ class Warehouse {
         this.products = products;
         this.addedDate = addedDate;
     }
+
+    static fromRawObject(raw) {
+        let warehouse = new Warehouse();
+        if (raw) {
+            Object.assign(warehouse, raw);
+            warehouse.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
+        }
+        return warehouse;
+    }
 }
 
 class Employee {
@@ -20,8 +29,10 @@ class Employee {
 
     static fromRawObject(raw) {
         let employee = new Employee();
-        Object.assign(employee, raw);
-        employee.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
+        if (raw) {
+            Object.assign(employee, raw);
+            employee.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
+        }
         return employee;
     }
 }
@@ -36,6 +47,16 @@ class Company {
         this.employees = employees;
         this.warehouses = warehouses;
         this.addedDate = addedDate;
+    }
+
+    static fromRawObject(raw) {
+        let company = new Company();
+        if (raw) {
+            Object.assign(company, raw);
+            company.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
+            company.registrationDate = new Date(Date.parse(raw.registrationDate)).toDateString();
+        }
+        return company;
     }
 }
 
@@ -53,8 +74,12 @@ class Product {
 
     static fromRawObject(raw) {
         let product = new Product();
-        Object.assign(product, raw);
-        product.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
+        if (raw) {
+            Object.assign(product, raw);
+            product.addedDate = new Date(Date.parse(raw.addedDate)).toDateString();
+            product.warehouse = Warehouse.fromRawObject(product.warehouse);
+            product.warehouse.company = Company.fromRawObject(product.warehouse.company);
+        }
         return product;
     }
 }

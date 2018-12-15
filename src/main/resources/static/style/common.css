@@ -1,3 +1,7 @@
+body {
+    background-color: #d4d4d480;
+}
+
 .page-footer {
     bottom: 0;
     color: #fff;
@@ -51,4 +55,21 @@
     background: #46788c;
     color: #f8f9fa;
     margin-bottom: 0;
+}
+
+.category {
+    color: #8c8c8c !important;
+    cursor: pointer;
+}
+
+.arrow {
+    color: #8c8c8c !important;
+    font-size: 13px;
+    font-weight: 200;
+    margin: 0 3px;
+}
+
+.logo-small {
+    width: 30px;
+    height: 30px;
 }
